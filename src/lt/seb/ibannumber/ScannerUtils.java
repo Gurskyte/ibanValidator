@@ -10,9 +10,9 @@ class ScannerUtils {
         return scanner.nextLine();
     }
     static String enterIbanNumber() {
-        System.out.println("Enter IBAN number:\n");
+        System.out.println("Enter IBAN number:");
         String ibanNumber = scanner.nextLine();
-        while (ibanNumber.length() > 30 || !ibanNumber.matches("[A-Z0-9]")) {
+        while (ibanNumber.length() > 30 || !ibanNumber.matches("(^[A-Z0-9]+)")) {
             System.out.println("IBAN number is not valid, reenter:\n");
             ibanNumber = scanner.nextLine();
         }
